@@ -5,7 +5,7 @@
 
   // updates disabled
   "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   "update.showReleaseNotes": false,
   "update.mode": "none",
 
@@ -114,13 +114,24 @@
 
   // Ruff как форматтер и фиксер для Python
   "python.formatting.provider": "ruff",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit"
-  },
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": "explicit",
+  //   "source.organizeImports": "explicit",
+  // },
+
+  // Не позволяем Pylance самостоятельно сортировать импорты.
+  // Этим занимается только Ruff.
+  "python.analysis.disableOrganizeImports": true,
+
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
   },
+
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
   "editor.unicodeHighlight.nonBasicASCII": false,
@@ -149,5 +160,9 @@
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.pdf": "default"
-  }
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.stickyScroll.enabled": false,
+  "chat.titleBar.signIn.enabled": false,
+  "chat.titleBar.openInAgentsWindow.enabled": false
 }
