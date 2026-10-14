@@ -1,0 +1,193 @@
+{
+  "workbench.tips.enabled": false,
+  "files.insertFinalNewline": true,
+  "editor.lightbulb.enabled": "off",
+
+  // updates disabled
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": "off",
+  "update.showReleaseNotes": false,
+  "update.mode": "none",
+
+  // terminal
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.enableFileLinks": "off",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.scrollback": 100000,
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.persistentSessionScrollback": 100000,
+
+  // editor
+  "editor.minimap.enabled": false,
+  "editor.find.seedSearchStringFromSelection": "selection",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingOvertype": "never",
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.hover.delay": 100,
+  "editor.roundedSelection": false,
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.scrollByPage": true,
+  "editor.selectionHighlight": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.includeStrings": false,
+
+  // debug
+  "debug.autoExpandLazyVariables": "on",
+  "debug.inlineValues": "on",
+  "debug.terminal.clearBeforeReusing": true,
+  "workbench.startupEditor": "none",
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
+  "workbench.cloudChanges.autoResume": "off",
+  "workbench.cloudChanges.continueOn": "off",
+  "workbench.enableExperiments": false,
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "window.density.editorTabHeight": "compact",
+  "accessibility.verbosity.comments": false,
+  "search.defaultViewMode": "tree",
+  "telemetry.telemetryLevel": "off",
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  "settingsSync.keybindingsPerPlatform": false,
+  "window.zoomLevel": 1,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.colorTheme": "Monokai",
+
+  // git
+  "git.autoRepositoryDetection": "subFolders",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Python / Pylance
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.importFormat": "absolute",
+  "python.analysis.enablePytestSupport": true,
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "fastapi",
+      "depth": 3,
+      "includeAllSymbols": true
+    },
+    {
+      "name": "sqlalchemy",
+      "depth": 3,
+      "includeAllSymbols": true
+    }
+  ],
+  "editor.stickyScroll.enabled": false,
+
+  // global default formatter for non-python (Prettier)
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Vue (vetur)
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+
+  // file nesting rules
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+
+  // Ruff как форматтер и фиксер для Python
+  "python.formatting.provider": "ruff",
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": "explicit",
+  //   "source.organizeImports": "explicit",
+  // },
+
+  // Не позволяем Pylance самостоятельно сортировать импорты.
+  // Этим занимается только Ruff.
+  "python.analysis.disableOrganizeImports": true,
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, BreakBeforeBraces: Attach, ColumnLimit: 120 }",
+  "C_Cpp.formatting": "clangFormat",
+  "[c]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "[cpp]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "editor.fontSize": 16,
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.browser.showInTitleBar": false,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.pdf": "default"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.stickyScroll.enabled": false,
+  "chat.titleBar.signIn.enabled": false,
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json": [
+      "**/playbooks/*.yml",
+      "**/playbooks/*.yaml",
+      "cluster.yml", // Переопределит схему для главного файла Kubespray
+      "ansible/**/*.yml" // Полезно для остальных файлов Kubespray
+    ]
+  },
+  "files.associations": {
+    "**/playbooks/**/*.yml": "ansible",
+    "**/roles/**/tasks/*.yml": "ansible",
+    "**/roles/**/handlers/*.yml": "ansible",
+    "cluster.yml": "ansible"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
+  },
+  "ansible.python.interpreterPath": "/home/comp/.local/share/uv/tools/ansible/bin/python",
+  // "ansible.ansible.path": "/home/comp/.local/bin/ansible",
+  "ansible.ansible.path": "/home/comp/.local/share/uv/tools/ansible/bin/ansible",
+  "ansible.validation.enabled": true,
+  "ansible.validation.lint.enabled": false
+}
